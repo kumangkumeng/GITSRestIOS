@@ -1,0 +1,30 @@
+{
+  "name": "GITSRest",
+  "version": "0.1.0",
+  "summary": "A short description of GITSRest.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rahadian@dealservices.nl/GITSRest",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rahadian@dealservices.nl": "kumangxxx@gits.co.id"
+  },
+  "source": {
+    "git": "https://github.com/rahadian@dealservices.nl/GITSRest.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GITSRest/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "SwiftyJSON": [
+
+    ]
+  }
+}

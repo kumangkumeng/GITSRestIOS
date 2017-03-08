@@ -1,0 +1,6 @@
+framework module GITSRest {
+  umbrella header "GITSRest-umbrella.h"
+
+  export *
+  module * { export * }
+}

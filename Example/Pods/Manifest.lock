@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.3.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - GITSRest (0.1.0):
+    - Alamofire
+    - SwiftyJSON
+  - Nimble (5.1.1)
+  - Nimble-Snapshots (4.4.0):
+    - Nimble-Snapshots/Core (= 4.4.0)
+  - Nimble-Snapshots/Core (4.4.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - Quick (1.0.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - GITSRest (from `../`)
+  - Nimble (~> 5.1.1)
+  - Nimble-Snapshots
+  - Quick (~> 1.0.0)
+
+EXTERNAL SOURCES:
+  GITSRest:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GITSRest: 006a58aa34a8d70518933b0ee9bc925c61fd5c7c
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 595f8177a8cc347995dd70cd6e47714e3178a814
+
+COCOAPODS: 1.2.0
