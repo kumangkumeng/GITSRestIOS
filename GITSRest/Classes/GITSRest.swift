@@ -10,18 +10,36 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+public enum GITSRestError
+{
+    case unknown
+    case timeout
+    case serverFailure(code : Int, message : String)
+    case unauthorized
+}
+
 public class GITSRest
 {
-    public static func runRequest(urlRequest : URLRequest, jsonValidation : ((JSON) -> (Error?))? = nil, callback : @escaping (Error?, JSON?) -> ()) -> DataRequest
+    public static func runRequest(urlRequest : URLRequest, jsonValidation : ((JSON) -> (GITSRestError?))? = nil, callback : @escaping (GITSRestError?, JSON?) -> ()) -> DataRequest
     {
         var req = request(urlRequest).responseJSON { response in
             var json : JSON?
-            var err : Error?
+            var err : GITSRestError?
             switch response.result {
             case .success(let value) :
                 json = JSON(value)
             case .failure(let error) :
-                err = error
+                if let nserror = error as? NSError
+                {
+                    if nserror.code == -1001
+                    {
+                        err = .timeout
+                    } else if nserror.code == 401 {
+                        err = .unauthorized
+                    } else {
+                        err = .serverFailure(code: nserror.code, message: nserror.localizedDescription)
+                    }
+                }
             }
             
             if let validator = jsonValidation, let jsonData = json, err == nil
