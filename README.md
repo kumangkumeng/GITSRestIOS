@@ -22,7 +22,7 @@ pod "GITSRest"
 
 ## Author
 
-rahadian@dealservices.nl, kumangxxx@gits.co.id
+kumangxxx@gits.co.id
 
 ## License
 
