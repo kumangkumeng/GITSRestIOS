@@ -46,6 +46,7 @@
 		409FAF576DBF8C84A9B6E18637ACE6E6 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9F83796D6D537A503B1516B1C2E04 /* QuickSelectedTestSuiteBuilder.swift */; };
 		40DFBA37EC892AAA1E90AF4889E0049C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978A6D0F179E509915B1346E2F4C72D7 /* Quick.framework */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 85268997058AABE15F47613355A07681 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		45B7D09F1E700F7800FD6F55 /* GITSRestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B7D09D1E700CDB00FD6F55 /* GITSRestError.swift */; };
 		4647B4889669D5F1E0A7A1C2ECFDFD68 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A80FC137956841FB907CB8D1F16FD9CF /* QuickSpec.m */; };
 		469E9C3ED9FD6009F7C9AAF9E537E212 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = C89FC61DAE0B935EB9C0069CE08A9038 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49E165349B53FBB18ABB30B97E8F2430 /* Pods-GITSRest_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE68F17F12B2DCA79F5202295E81CEB /* Pods-GITSRest_Example-dummy.m */; };
@@ -315,6 +316,7 @@
 		43AABEA5D5CD0DA1275FE4BD800401F8 /* GITSRest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GITSRest-umbrella.h"; sourceTree = "<group>"; };
 		457B10F9787E7967D7B86867C5AC8A37 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		45A34D8769DEC5CD82A8B52E03649779 /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
+		45B7D09D1E700CDB00FD6F55 /* GITSRestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GITSRestError.swift; sourceTree = "<group>"; };
 		46FD334494A3B9C225BF019A37A9210A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488EF7674AFDCE5C9E9144E395FAC82A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B04044B276C476CF9ECC08D22A608E /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				BD98C58769237CA8FD85DE4BB58A1F08 /* GITSRest.swift */,
+				45B7D09D1E700CDB00FD6F55 /* GITSRestError.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1314,6 +1317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA52373EB1D8EDA52F795868E6D9E107 /* GITSRest-dummy.m in Sources */,
+				45B7D09F1E700F7800FD6F55 /* GITSRestError.swift in Sources */,
 				29349E91ECA403531268696D89EAB8A2 /* GITSRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

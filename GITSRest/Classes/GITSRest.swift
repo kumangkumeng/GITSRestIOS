@@ -10,14 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-public enum GITSRestError
-{
-    case unknown
-    case timeout
-    case serverFailure(code : Int, message : String)
-    case unauthorized
-}
-
 public class GITSRest
 {
     public static func runRequest(urlRequest : URLRequest, jsonValidation : ((JSON) -> (GITSRestError?))? = nil, callback : @escaping (GITSRestError?, JSON?) -> ()) -> DataRequest

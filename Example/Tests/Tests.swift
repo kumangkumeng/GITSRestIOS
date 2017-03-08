@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-@testable import GITSRest
+import GITSRest
 import SwiftyJSON
 
 class TableOfContentsSpec: QuickSpec {
@@ -41,25 +41,15 @@ class TableOfContentsSpec: QuickSpec {
                             
                             if json["status"].intValue != 200
                             {
-                                return NSError(domain: json["message"].stringValue, code: json["status"].intValue, userInfo: nil)
+                                return .serverFailure(code: json["status"].intValue, message: json["message"].stringValue)
                             }
                             
                             return nil
                         }, callback: { err, json in
                             var status = 0
-                            var messsage : String?
-                            
-                            if let error = err
-                            {
-                                messsage = error.localizedDescription
-                            } else if let j = json
-                            {
-                                status = j["status"].intValue
-                                messsage = j["message"].string
-                            }
                             
                             expect(status) == 200
-                            expect(messsage).to(beNil())
+                            expect(err).to(beNil())
                             done()
                         })
                     }
