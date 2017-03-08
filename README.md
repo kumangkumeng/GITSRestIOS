@@ -20,6 +20,25 @@ it, simply add the following line to your Podfile:
 pod "GITSRest"
 ```
 
+## Usage
+
+```swift
+import GITSRest
+
+GITSRest.runRequest(urlRequest: createRequest(), jsonValidation : { json in
+
+    if json["status"].intValue != 200
+    {
+        return NSError(domain: json["message"].stringValue, code: json["status"].intValue, userInfo: nil)
+    }
+
+    return nil
+}, callback: { err, json in
+    
+})
+
+```
+
 ## Author
 
 kumangxxx@gits.co.id
